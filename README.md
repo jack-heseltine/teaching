@@ -1,6 +1,4 @@
-# Neural Networks for Students
-
-🧠
+# Neural Networks for Students 🧠
 
 This repository is a small teaching project about how neural networks learn. It is written for classroom use and is best explored step by step.
 
@@ -22,9 +20,7 @@ The notebook builds up the main ideas behind neural networks in a simple order:
 
 The goal is not just to use machine learning, but to understand what the model is doing.
 
-## Setup in VS Code
-
-💻
+## Setup in VS Code 💻
 
 If this is your first time running the project, follow these steps in order.
 
@@ -48,9 +44,7 @@ In VS Code, install these extensions:
 
 These let you run `.py` files and notebooks directly inside VS Code.
 
-### 3. Create a virtual environment
-
-📦
+### 3. Create a virtual environment 📦
 
 A virtual environment keeps this project's packages separate from other Python projects.
 
@@ -82,9 +76,7 @@ On Windows PowerShell:
 
 After activation, your terminal usually shows `(.venv)` at the beginning of the line.
 
-### 5. Install the packages
-
-⬇️
+### 5. Install the packages ⬇️
 
 With the virtual environment active, install the required packages:
 
@@ -94,7 +86,35 @@ pip install -r requirements.txt
 
 This may take a few minutes because it includes notebook tools, plotting libraries, and machine learning packages.
 
-### 6. Tell VS Code to use the virtual environment
+### 6. Install Graphviz system software 🎨
+
+For the computation graph visualizations to work, you need to install Graphviz on your system (not just the Python package).
+
+**On macOS:**
+
+If you have Homebrew installed:
+
+```bash
+brew install graphviz
+```
+
+If you don't have Homebrew, install it from https://brew.sh or download Graphviz directly from https://graphviz.org/download/
+
+**On Windows:**
+
+Option 1 — Using Chocolatey (if installed):
+
+```powershell
+choco install graphviz
+```
+
+Option 2 — Direct download:
+
+Download the installer from https://graphviz.org/download/windows/ and run it.
+
+After installation, restart your terminal or VS Code.
+
+### 7. Tell VS Code to use the virtual environment
 
 In VS Code:
 
@@ -104,7 +124,7 @@ In VS Code:
 
 If you are using the notebook, also check the kernel in the top right of the notebook window and select the same `.venv` environment.
 
-### 7. First run of the notebook
+### 8. First run of the notebook
 
 Now open [IAT/iat_demo.ipynb](IAT/iat_demo.ipynb).
 
@@ -114,20 +134,16 @@ For the smoothest first run:
 2. Wait for each cell to finish before starting the next one.
 3. If a later cell fails, rerun the earlier helper cells first.
 
-### 8. If something goes wrong
-
-🛠️
+### 9. If something goes wrong 🛠️
 
 Here are the most common fixes:
 
 - `ModuleNotFoundError`: the packages are not installed in the selected environment. Activate `.venv` and run `pip install -r requirements.txt` again.
 - Notebook runs with the wrong Python: change the notebook kernel to `.venv`.
 - A variable or function is missing: rerun the earlier cells because notebooks depend on execution order.
-- Graph drawing problems: make sure `graphviz` was installed from `requirements.txt`.
+- Graph drawing fails with "ExecutableNotFound": Graphviz system software is not installed. See step 6 above for installation instructions on your OS.
 
-## Best Place To Start
-
-🚀
+## Best Place To Start 🚀
 
 Open [IAT/iat_demo.ipynb](IAT/iat_demo.ipynb) in VS Code or Jupyter and run the cells from top to bottom.
 
@@ -140,9 +156,7 @@ Many cells include animations and visualizations. These are there to help you bu
 
 If a cell fails, it is often enough to run the earlier cells again so that helper functions and variables are loaded.
 
-## Other File
-
-🔢
+## Other File 🔢
 
 [IAT/mnist-pytorch.py](IAT/mnist-pytorch.py) is a separate PyTorch script for classifying handwritten digits from the MNIST dataset. Think of it as the more advanced follow-up after the notebook.
 
@@ -160,8 +174,6 @@ There is also a [requirements.txt](requirements.txt) file in the repo root.
 4. Change a few values and see what happens.
 5. Move to the MNIST script only after the notebook ideas make sense.
 
-## Big Idea
-
-✨
+## Big Idea ✨
 
 Neural networks are not magic. They are built from simple mathematical steps repeated many times. This notebook is designed to make those steps visible.
